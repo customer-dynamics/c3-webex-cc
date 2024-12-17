@@ -2,7 +2,10 @@
 	"name": "c3-webex-cc",
 	"version": "0.0.0",
 	"private": true,
-	"scripts": {},
+	"scripts": {
+		"style:check": "npx prettier --check .",
+		"style:fix": "npx prettier --write ."
+	},
 	"devDependencies": {
 		"@semantic-release/github": "^11.0.1",
 		"@semantic-release/release-notes-generator": "^14.0.1",
