@@ -95,3 +95,12 @@ Follow these steps to create the wrap-up code and idle code:
 | Description     | A description, like "The agent has transferred the customer to an IVR and will wait for them to return." |
 | Make it default | No                                                                                                       |
 | Code type       | Default Wrapup Work Type                                                                                 |
+
+### Check Desktop Profile
+
+To ensure these idle and wrap-up codes are available to the agent, you'll need to double check that they are available as part of the agent's desktop profile. You can check this by navigating to the [_Desktop Profiles_ section in the Webex Contact Center settings](https://admin.webex.com/wxcc/desktop-experience/desktop-profiles) of Control Hub:
+
+1. Select the profile you want to use, or the one you have assigned to your agents already
+2. Select the _Idle/Wrap-up Codes_ tab
+3. Check that the _Wrap-up Codes_ and _Idle Codes_ options are either set to _All_, or that the idle/wrap-up codes you created are selected
+4. [Check your agents](https://admin.webex.com/wxcc/user-mgmt/users) to make sure that this desktop profile is assigned to them
