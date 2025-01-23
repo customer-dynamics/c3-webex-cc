@@ -28,8 +28,12 @@ jobs:
             echo "approveAndMerge=false" >> $GITHUB_ENV
           fi
 
-      - name: Debug GITHUB_ENV
-        run: cat $GITHUB_ENV
+      - name: Debug secret retrieval
+        run: |
+          echo "Secret length: ${#DEPENDABOT_PAT}"
+          echo "Partial secret: ${DEPENDABOT_PAT:0:4}****"
+        env:
+          DEPENDABOT_PAT: ${{ secrets.DEPENDABOT_PAT }}
 
       # Approve the pull request
       - name: Approve pull request
