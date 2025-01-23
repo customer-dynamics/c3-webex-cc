@@ -20,7 +20,11 @@ jobs:
       # Check if the update is a minor or patch version
       - name: Check for auto merge
         id: check-auto-merge
-        run: echo "approveAndMerge=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-patch' || '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-minor' ]])" >> $GITHUB_ENV
+        run: |
+          echo "approveAndMerge=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-patch' || '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-minor' ]])" >> $GITHUB_ENV
+
+      - name: Debug GITHUB_ENV
+        run: cat $GITHUB_ENV
 
       # Approve the pull request
       - name: Approve pull request
