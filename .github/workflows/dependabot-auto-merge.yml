@@ -17,14 +17,16 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Check if the update is a minor or patch version
+      # Check the semantic version update type
       - name: Check for auto merge
         id: check-auto-merge
         run: |
           echo "Version update type: ${{ steps.metadata.outputs.update-type }}"
-          echo "hasMajorUpdate=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-major' ]])" >> $GITHUB_ENV
-          echo "hasMinorUpdate=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-minor' ]])" >> $GITHUB_ENV
-          echo "hasPatchUpdate=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-patch' ]])" >> $GITHUB_ENV
+          if [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-minor" ]] || [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-patch" ]]; then
+            echo "approveAndMerge=true" >> $GITHUB_ENV
+          else
+            echo "approveAndMerge=false" >> $GITHUB_ENV
+          fi
 
       - name: Debug GITHUB_ENV
         run: cat $GITHUB_ENV
