@@ -4,7 +4,7 @@
 
 C3 for Webex CC allows agents to collect payments over the phone securely using a secure **interactive voice response (IVR)** system. This feature is designed to help you achieve and maintain PCI DSS compliance while taking payments. When an agent determines that a customer needs to make a payment, they can transfer the call to the IVR system to collect the payment details securely. This keeps the agent from ever seeing or hearing the payment details. When the payment is complete, the customer is transferred back to the agent.
 
-## Installation
+## Setup
 
 ### Define Global Variables
 

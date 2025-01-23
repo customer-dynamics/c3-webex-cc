@@ -7,7 +7,7 @@ Before getting started with C3 for Webex CC, please ensure the following:
 - You have a current C3 vendor account
 - You have admin access and are able to configure items in Webex Contact Center
 
-## Installation
+## Setup
 
 ### Configure Payment Request Methods
 
