@@ -1,20 +1,37 @@
 name: Dependabot Auto Merge
+on: pull_request
 
-on:
-  # This must be `pull_request_target` for Dependabot-triggered PRs:
-  # https://github.blog/changelog/2021-02-19-github-actions-workflows-triggered-by-dependabot-prs-will-run-with-read-only-permissions/
-  pull_request_target:
-    types: [opened, reopened]
-    branches: [main]
+permissions:
+  pull-requests: write
 
 jobs:
   auto-merge:
     name: Auto merge
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      # Fetch the Dependabot metadata
+      - name: Download Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
         with:
-          target: minor
           github-token: ${{ secrets.DEPENDABOT_PAT }}
-          command: squash and merge
+
+      # Check if the update is a minor or patch version
+      - name: Check for auto merge
+        id: check-auto-merge
+        run: echo "approveAndMerge=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-patch' || '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-minor' ]])" >> $GITHUB_ENV
+
+      # Approve the pull request
+      - name: Approve pull request
+        if: env.approveAndMerge == 'true'
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          github-token: ${{ secrets.DEPENDABOT_PAT }}
+
+      # Add a comment to have Dependabot squash and merge the PR
+      - name: Dependabot squash and merge
+        if: env.approveAndMerge == 'true'
+        run: gh pr comment ${{ github.event.pull_request.html_url }} --body "@dependabot squash and merge"
+        env:
+          github-token: ${{ secrets.DEPENDABOT_PAT }}
