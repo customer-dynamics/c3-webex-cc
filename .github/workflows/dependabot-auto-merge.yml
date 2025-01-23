@@ -8,6 +8,7 @@ jobs:
   auto-merge:
     name: Auto merge
     runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       # Fetch the Dependabot metadata
       - name: Download Dependabot metadata
