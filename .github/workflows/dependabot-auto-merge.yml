@@ -21,7 +21,10 @@ jobs:
       - name: Check for auto merge
         id: check-auto-merge
         run: |
-          echo "approveAndMerge=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-patch' || '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-minor' ]])" >> $GITHUB_ENV
+          echo "Version update type: ${{ steps.metadata.outputs.update-type }}"
+          echo "hasMajorUpdate=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-major' ]])" >> $GITHUB_ENV
+          echo "hasMinorUpdate=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-minor' ]])" >> $GITHUB_ENV
+          echo "hasPatchUpdate=$([[ '${{ steps.metadata.outputs.update-type }}' == 'version-update:semver-patch' ]])" >> $GITHUB_ENV
 
       - name: Debug GITHUB_ENV
         run: cat $GITHUB_ENV
