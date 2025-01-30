@@ -10,7 +10,7 @@ Customer Dynamics is a PCI DSS Level 1 Service Provider and undergoes annual aud
 
 ## Your Responsibility
 
-While Customer Dynamics is PCI DSS compliant, it is important to note that compliance is a shared responsibility. Because C3 for Webex CC is hosted using your own AWS infrastructure, you are responsible for ensuring that your environment is secure and that you are following the PCI DSS requirements. Additionally, you are responsible for keeping your infrastructure up to date with the latest security patches and updates that are released for C3 for Webex CC.
+While Customer Dynamics is PCI DSS compliant, it is important to note that compliance is a shared responsibility. Because C3 for Webex CC is hosted using your own Webex infrastructure, you are responsible for ensuring that your environment is secure and that you are following the PCI DSS requirements. Additionally, you are responsible for keeping your infrastructure up to date with the latest security patches and updates that are released for C3 for Webex CC.
 
 ## Attestation of Compliance
 
