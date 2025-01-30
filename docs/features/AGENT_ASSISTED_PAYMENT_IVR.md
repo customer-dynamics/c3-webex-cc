@@ -14,15 +14,10 @@ To add these in Webex Control Hub, navigate to the [_Global Variables_ subsectio
 
 The following global variables will need to be defined in your environment:
 
-| Value             | Type    | Description                                                                                           |
-| ----------------- | ------- | ----------------------------------------------------------------------------------------------------- |
-| `C3AgentId`       | String  | The agent identifier entered by the agent in the C3 desktop widget.                                   |
-| `C3ContactEmail`  | String  | The email address for the contact, as entered by the agent in the C3 desktop widget.                  |
-| `C3PaymentAmount` | Decimal | The amount the customer has elected to pay, either entered by the agent (IVR) or customer (web link). |
-| `C3SubjectId`     | String  | The subject identifier entered by the agent in the C3 desktop widget.                                 |
-| `C3WebexAgentId`  | String  | The unique identifier for the Webex CC agent.                                                         |
-
-For the default value of `C3PaymentAmount`, use the value `0.0`. Whether to make these variables reportable or viewable can be left to your discretion.
+| Value                  | Type   | Sensitive | Description                                                                                                                |
+| ---------------------- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `C3Env`                | String | No        | The C3 environment to use in flow (`dev`, `staging`, or `prod`). Unless otherwise specified for your tenant, use **prod**. |
+| `C3PaymentRequestInfo` | String | No        | The information for the C3 payment request, represented as JSON.                                                           |
 
 ### Import Flow
 
@@ -32,6 +27,33 @@ To import the agent assist IVR flow into your Webex Contact Center environment, 
 2. Navigate to the [_Flows_ subsection of _Flows_ in the Webex Contact Center settings](https://admin.webex.com/wxcc/customer-experience/routing-flows/flows) of Control Hub
 3. Under the _Manage Flows_ button, select _Import Flows_
 4. Select the downloaded `C3AgentAssistedPaymentIVR.json` file and click _Import_
+
+### Set Values in the IVR Flow
+
+After importing the flow, you'll need to set some values within your flow. Follow these steps to set the values:
+
+While on the list of flows in Control Hub, find the `C3AgentAssistedPaymentIVR` flow and click on the arrow button at the end to view the flow in Flow Designer. At the top of Flow Designer, click the _Edit_ toggle to enable editing.
+
+!["An image of Webex Flow Designer, highlighting the edit toggle"](../images/flow-designer-editing.png 'Flow Designer editing toggle')
+
+Open the _properties_ panel on the right side of the screen, if not already open.
+
+!["An image of Webex Flow Designer, highlighting the button to open the properties panel"](../images/flow-designer-properties-panel.png 'Flow Designer properties panel button')
+
+With the properties panel open, scroll down to the _Flow Variables_ section. Set the following variables by clicking on the variable and setting the _Default Value_:
+
+| Variable Name   | Default Value                           |
+| --------------- | --------------------------------------- |
+| `C3ApiKey`      | The API key assigned to your C3 vendor. |
+| `ZiftAccountId` | The account ID for the                  |
+| `ZiftUserName`  | The Zift username for your C3 vendor.   |
+| `ZiftPassword`  | The Zift password for your C3 vendor.   |
+
+!["An image of Webex Flow Designer, highlighting four variables in the properties panel"](../images/flow-designer-flow-variables.png 'Flow Designer flow variables')
+
+Publish the flow by enabling the _Validation_ switch and then clicking the _Publish Flow_ button once validation is successful.
+
+!["An image of Webex Flow Designer, highlighting the validation switch and publish button"](../images/flow-designer-publish.png 'Flow Designer publish')
 
 ### Add a Channel for the IVR
 
@@ -56,20 +78,20 @@ Follow these steps to add the channel:
 
 ##### Entry Point Settings
 
-| Field                   | Value                                                                       |
-| ----------------------- | --------------------------------------------------------------------------- |
-| Service Level Threshold | Any number of seconds                                                       |
-| Timezone                | Any applicable timezone                                                     |
-| Routing Flow            | The `C3AgentAssistedPaymentIVR` flow you imported earlier                   |
-| Version Label           | Latest                                                                      |
-| Music on Hold           | Any hold music—the customer should not hear this under normal circumstances |
+| Field                   | Value                                                                      |
+| ----------------------- | -------------------------------------------------------------------------- |
+| Service Level Threshold | Any number of seconds                                                      |
+| Timezone                | Any applicable timezone                                                    |
+| Routing Flow            | The `C3AgentAssistedPaymentIVR` flow you imported earlier                  |
+| Version Label           | Latest                                                                     |
+| Music on Hold           | Any hold music—the contact should not hear this under normal circumstances |
 
 ### Create Wrap-Up Code and Idle Code for Transfer
 
 > [!NOTE]
 > If you already have a wrap-up code and idle code you would like to use, you may skip this step.
 
-When the customer is transferred away, the call will automatically be wrapped up on behalf of the agent and the agent will be placed in an idle state. The agent will stay in this state until the customer is transferred back to them, or the customer hangs up. This is done in order to prevent the agent from receiving any new calls while they wait for the customer. The C3 for Webex CC widget requires you to define a wrap-up code and idle code to use for this purpose.
+When the contact is transferred away, the call will automatically be wrapped up on behalf of the agent and the agent will be placed in an idle state. The agent will stay in this state until the contact is transferred back to them, or the contact hangs up. This is done in order to prevent the agent from receiving any new calls while they wait for the contact. The C3 for Webex CC widget requires you to define a wrap-up code and idle code to use for this purpose.
 
 Follow these steps to create the wrap-up code and idle code:
 
@@ -80,21 +102,21 @@ Follow these steps to create the wrap-up code and idle code:
 
 #### Idle Code
 
-| Field           | Value                                                                            |
-| --------------- | -------------------------------------------------------------------------------- |
-| Name            | Something identifiable to the agent, like "Waiting On Customer"                  |
-| Description     | A description, like "Waiting on the customer to complete the process in an IVR." |
-| Make it default | No                                                                               |
-| Code type       | Default Idle Work Type                                                           |
+| Field           | Value                                                                           |
+| --------------- | ------------------------------------------------------------------------------- |
+| Name            | Something identifiable to the agent, like "Waiting On Contact"                  |
+| Description     | A description, like "Waiting on the contact to complete the process in an IVR." |
+| Make it default | No                                                                              |
+| Code type       | Default Idle Work Type                                                          |
 
 #### Wrap-Up Code
 
-| Field           | Value                                                                                                    |
-| --------------- | -------------------------------------------------------------------------------------------------------- |
-| Name            | Something identifiable, like "Transferred to IVR"                                                        |
-| Description     | A description, like "The agent has transferred the customer to an IVR and will wait for them to return." |
-| Make it default | No                                                                                                       |
-| Code type       | Default Wrapup Work Type                                                                                 |
+| Field           | Value                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------- |
+| Name            | Something identifiable, like "Transferred to IVR"                                                       |
+| Description     | A description, like "The agent has transferred the contact to an IVR and will wait for them to return." |
+| Make it default | No                                                                                                      |
+| Code type       | Default Wrapup Work Type                                                                                |
 
 ### Check Desktop Profile
 

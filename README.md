@@ -6,7 +6,7 @@
 
 C3 for Webex CC is a collection of resources to help you collect payments over the phone with Webex CC using [C3 Payment](https://www.customerdynamics.com/c3-payment).
 
-![Screenshot of the C3 Payment Request agent desktop app within Webex CC. An icon of a credit card displayed with the heading "Card Number Entered". Below it is the message, "The customer has entered their credit card number".](./docs/images/agent-desktop-app.png 'C3 Payment Request agent desktop app')
+![Screenshot of the C3 Payment Request agent desktop app within Webex CC. An icon of a credit card displayed with the heading "Card Number Entered". Below it is the message, "The Contact has entered their credit card number".](./docs/images/agent-desktop-app.png 'C3 Payment Request agent desktop app')
 
 ## Features
 

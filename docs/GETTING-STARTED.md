@@ -44,7 +44,7 @@ To add the widget, add the following to your desktop layout JSON file, in the `a
 ```json
 "c3-payment-request": {
   "comp": "c3-payment-request",
-  "script": "https://<<Your C3 Vendor ID>>.call2action.link/widget/widget.js",
+  "script": "",
   "attributes": {
     "dark": "$STORE.app.darkMode"
   },
@@ -99,6 +99,19 @@ To add the widget, add the following to your desktop layout JSON file, in the `a
 ### Define Widget Properties
 
 Provide the appropriate values in the JSON above, using the following descriptions to guide you.
+
+#### Script
+
+The `script` to use for the widget depends on the environment used. For this value, use the URL that corresponds to your environment:
+
+| Environment | Script URL                                                        |
+| ----------- | ----------------------------------------------------------------- |
+| Development | `https://{{Your C3 Vendor ID}}.dev.c2a.link/widget/widget.js`     |
+| Staging     | `https://{{Your C3 Vendor ID}}.staging.c2a.link/widget/widget.js` |
+| Production  | `https://{{Your C3 Vendor ID}}.call2action.link/widget/widget.js` |
+
+> [!NOTE]
+> Unless otherwise specified for your vendor, use the production script.
 
 #### General Configuration
 
