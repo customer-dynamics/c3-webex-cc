@@ -14,10 +14,10 @@ To add these in Webex Control Hub, navigate to the [_Global Variables_ subsectio
 
 The following global variables will need to be defined in your environment:
 
-| Value                  | Type   | Sensitive | Description                                                                                                                |
-| ---------------------- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Value                  | Type   | Sensitive | Description                                                                                                                    |
+| ---------------------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `C3Env`                | String | No        | The C3 environment to use in the flow (`dev`, `staging`, or `prod`). Unless otherwise specified for your tenant, use **prod**. |
-| `C3PaymentRequestInfo` | String | No        | The information for the C3 payment request, represented as JSON.                                                           |
+| `C3PaymentRequestInfo` | String | No        | The information for the C3 payment request, represented as JSON.                                                               |
 
 ### Import Flow
 
