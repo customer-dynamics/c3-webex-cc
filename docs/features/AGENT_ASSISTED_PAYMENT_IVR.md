@@ -14,16 +14,16 @@ To add these in Webex Control Hub, navigate to the [_Global Variables_ subsectio
 
 The following global variables will need to be defined in your environment:
 
-| Value                  | Type   | Sensitive | Description                                                                                                                    |
-| ---------------------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `C3Env`                | String | No        | The C3 environment to use in the flow (`dev`, `staging`, or `prod`). Unless otherwise specified for your tenant, use **prod**. |
-| `C3PaymentRequestInfo` | String | No        | The information for the C3 payment request, represented as JSON.                                                               |
-| `C3CciAgentId`         | String | No        | The ID of the Webex agent to transfer back to.                                                                                 |
-| `C3ContactEmail`      | String | No        | The email address of the contact to use for a receipt.                                                                         |
-| `C3ContactFirstName`  | String | No        | The first name of the contact.                                                                                                  |
-| `C3ContactLastName`   | String | No        | The last name of the contact.                                                                                                   |
-| `C3PaymentAmount`     | Decimal| No        | The amount to charge for the payment.                                                                                           |
-| `C3PaymentRequestId`  | String | No        | The ID of the payment request in C3.                                                                                            |
+| Value                  | Type    | Sensitive | Description                                                                                                                    |
+| ---------------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `C3Env`                | String  | No        | The C3 environment to use in the flow (`dev`, `staging`, or `prod`). Unless otherwise specified for your tenant, use **prod**. |
+| `C3PaymentRequestInfo` | String  | No        | The information for the C3 payment request, represented as JSON.                                                               |
+| `C3CciAgentId`         | String  | No        | The ID of the Webex agent to transfer back to.                                                                                 |
+| `C3ContactEmail`       | String  | No        | The email address of the contact to use for a receipt.                                                                         |
+| `C3ContactFirstName`   | String  | No        | The first name of the contact.                                                                                                 |
+| `C3ContactLastName`    | String  | No        | The last name of the contact.                                                                                                  |
+| `C3PaymentAmount`      | Decimal | No        | The amount to charge for the payment.                                                                                          |
+| `C3PaymentRequestId`   | String  | No        | The ID of the payment request in C3.                                                                                           |
 
 ### Import Flow
 
@@ -67,12 +67,12 @@ To use C3 during an _outbound_ call, you will need need to update the routing fl
 
 For your specific use case, update the flow(s) above to add the following previously defined global variables:
 
-* `C3CciAgentId`
-* `C3ContactEmail`
-* `C3ContactFirstName`
-* `C3ContactLastName`
-* `C3PaymentAmount`
-* `C3PaymentRequestId`
+- `C3CciAgentId`
+- `C3ContactEmail`
+- `C3ContactFirstName`
+- `C3ContactLastName`
+- `C3PaymentAmount`
+- `C3PaymentRequestId`
 
 Validate and publish the flow(s).
 
