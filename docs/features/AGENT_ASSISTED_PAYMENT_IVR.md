@@ -63,7 +63,7 @@ Publish the flow by enabling the _Validation_ switch and then clicking the _Publ
 
 ### Define Variables on Routing Flows
 
-To use C3 during an _outbound_ call, you will need need to update the routing flow associated with your Inbound Telephony Channel (otherwise known as an outdial entry point). Likewise, for using C3 with _inbound_ calls, you will need to update the routing flow associated with your Inbound Telephony Channel (otherwise known as an inbound entry point).
+To use C3 during an _outbound_ call, you will need to update the routing flow associated with your Inbound Telephony Channel (otherwise known as an outdial entry point). Likewise, for using C3 with _inbound_ calls, you will need to update the routing flow associated with your Inbound Telephony Channel (otherwise known as an inbound entry point).
 
 For your specific use case, update the flow(s) above to add the following previously defined global variables:
 
