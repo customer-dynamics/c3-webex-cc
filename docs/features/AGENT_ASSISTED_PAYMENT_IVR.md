@@ -14,10 +14,16 @@ To add these in Webex Control Hub, navigate to the [_Global Variables_ subsectio
 
 The following global variables will need to be defined in your environment:
 
-| Value                  | Type   | Sensitive | Description                                                                                                                |
-| ---------------------- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `C3Env`                | String | No        | The C3 environment to use in flow (`dev`, `staging`, or `prod`). Unless otherwise specified for your tenant, use **prod**. |
-| `C3PaymentRequestInfo` | String | No        | The information for the C3 payment request, represented as JSON.                                                           |
+| Value                  | Type    | Sensitive | Description                                                                                                                    |
+| ---------------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `C3Env`                | String  | No        | The C3 environment to use in the flow (`dev`, `staging`, or `prod`). Unless otherwise specified for your tenant, use **prod**. |
+| `C3PaymentRequestInfo` | String  | No        | The information for the C3 payment request, represented as JSON.                                                               |
+| `C3CciAgentId`         | String  | No        | The ID of the Webex agent to transfer back to.                                                                                 |
+| `C3ContactEmail`       | String  | No        | The email address of the contact to use for a receipt.                                                                         |
+| `C3ContactFirstName`   | String  | No        | The first name of the contact.                                                                                                 |
+| `C3ContactLastName`    | String  | No        | The last name of the contact.                                                                                                  |
+| `C3PaymentAmount`      | Decimal | No        | The amount to charge for the payment.                                                                                          |
+| `C3PaymentRequestId`   | String  | No        | The ID of the payment request in C3.                                                                                           |
 
 ### Import Flow
 
@@ -54,6 +60,21 @@ With the properties panel open, scroll down to the _Flow Variables_ section. Set
 Publish the flow by enabling the _Validation_ switch and then clicking the _Publish Flow_ button once validation is successful.
 
 !["An image of Webex Flow Designer, highlighting the validation switch and publish button"](../images/flow-designer-publish.png 'Flow Designer publish')
+
+### Define Variables on Routing Flows
+
+To use C3 during an _outbound_ call, you will need to update the routing flow associated with your Inbound Telephony Channel (otherwise known as an outdial entry point). Likewise, for using C3 with _inbound_ calls, you will need to update the routing flow associated with your Inbound Telephony Channel (otherwise known as an inbound entry point).
+
+For your specific use case, update the flow(s) above to add the following previously defined global variables:
+
+- `C3CciAgentId`
+- `C3ContactEmail`
+- `C3ContactFirstName`
+- `C3ContactLastName`
+- `C3PaymentAmount`
+- `C3PaymentRequestId`
+
+Validate and publish the flow(s).
 
 ### Add a Channel for the IVR
 

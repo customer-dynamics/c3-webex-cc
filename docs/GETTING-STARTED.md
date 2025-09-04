@@ -104,11 +104,11 @@ Provide the appropriate values in the JSON above, using the following descriptio
 
 The `script` to use for the widget depends on the environment used. For this value, use the URL that corresponds to your environment:
 
-| Environment | Script URL                                                        |
-| ----------- | ----------------------------------------------------------------- |
-| Development | `https://{{Your C3 Vendor ID}}.dev.c2a.link/widget/widget.js`     |
-| Staging     | `https://{{Your C3 Vendor ID}}.staging.c2a.link/widget/widget.js` |
-| Production  | `https://{{Your C3 Vendor ID}}.call2action.link/widget/widget.js` |
+| Environment | Script URL                                                    |
+| ----------- | ------------------------------------------------------------- |
+| Development | `https://agent-apps.staging.c2a.link/web-component/widget.js` |
+| Staging     | `https://agent-apps.staging.c2a.link/web-component/widget.js` |
+| Production  | `https://agent-apps.call2action.link/web-component/widget.js` |
 
 > [!NOTE]
 > Unless otherwise specified for your vendor, use the production script.
