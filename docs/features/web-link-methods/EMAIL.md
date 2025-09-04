@@ -18,7 +18,7 @@ Before getting started in this section, please ensure the following:
 An app is required to send emails through Webex Connect. To create an app, follow the steps in the [Webex Connect documentation](https://help.webexconnect.io/docs/email-cce).
 
 > [!IMPORTANT]
-> Register this app with the Webex Connect service that you created earlier.
+> Register this app with the Webex Connect service that you created earlier by using the "Register to Webex Engage" button. NOTE: This can only be done once!
 
 ### Create Template
 
