@@ -1220,12 +1220,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportCreditCardSelected",
           "httpRequestMethod:name": "POST",
@@ -1262,12 +1257,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportBankAccountSelected",
           "httpRequestMethod:name": "POST",
@@ -1304,12 +1294,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportCardNumberEntered",
           "httpRequestMethod:name": "POST",
@@ -1346,12 +1331,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportAccountNumberEntered",
           "httpRequestMethod:name": "POST",
@@ -1388,12 +1368,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportExpirationDateEntered",
           "httpRequestMethod:name": "POST",
@@ -1430,12 +1405,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportRoutingNumberEntered",
           "httpRequestMethod:name": "POST",
@@ -1521,12 +1491,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportCardTokenized",
           "httpRequestMethod:name": "POST",
@@ -1563,12 +1528,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportBankTokenized",
           "httpRequestMethod:name": "POST",
@@ -1605,12 +1565,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportPaymentProcessed",
           "httpRequestMethod:name": "POST",
@@ -1679,12 +1634,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportPaymentSubmissionError",
           "httpRequestMethod:name": "POST",
@@ -1753,12 +1703,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportPaymentValidationError",
           "httpRequestMethod:name": "POST",
@@ -1944,12 +1889,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportCustomerTransferring",
           "httpRequestMethod:name": "POST",
@@ -1999,12 +1939,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "SendReceipt",
           "httpRequestMethod:name": "POST",
@@ -2099,12 +2034,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportReceiptError",
           "httpRequestMethod:name": "POST",
@@ -2378,12 +2308,7 @@
           "httpRequestMethod_name": "POST",
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportIvrStarted",
           "httpRequestMethod:name": "POST",
@@ -7927,12 +7852,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -8047,12 +7967,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -8211,12 +8126,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -8375,12 +8285,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -8539,12 +8444,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -8703,12 +8603,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -8992,12 +8887,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -9156,12 +9046,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -9321,12 +9206,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -9612,12 +9492,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -9907,12 +9782,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -10803,12 +10673,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -11271,12 +11136,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -11654,12 +11514,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "activityId": "http-request-v2",
           "httpContentType:type": null,
           "httpResponseTimeout": "8000",
@@ -13381,12 +13236,7 @@
           "httpRequestMethod:type": null,
           "httpRequestMethod": "POST",
           "httpContentType:name": "Application/JSON",
-          "outputVariableArray": [
-            {
-              "outputVariable": "Select",
-              "jsonPathExp": ""
-            }
-          ],
+          "outputVariableArray": [],
           "httpContentType:type": null,
           "name": "ReportIvrStarted",
           "httpRequestMethod:name": "POST"
