@@ -39,61 +39,90 @@ Choose this option if you want to enable customers to make payments on their own
 
 The C3 Payment Request widget is a full page widget that agents use in the Webex CC Desktop interface. This widget will need to be added to the desktop layout that your agents use. To find the desktop layouts currently in use, or to create a new one, navigate to the [_Desktop Layouts_ section in the Webex Contact Center settings](https://admin.webex.com/wxcc/desktop-experience/desktop-layouts) in Control Hub.
 
-To add the widget, add the following to your desktop layout JSON file, in the `agent > area > navigation > page > widgets` section:
+To add the widget, add the following to your desktop layout JSON file, in the array for the `agent > area > navigation` section:
 
 ```json
-"c3-payment-request": {
-  "comp": "c3-payment-request",
-  "script": "",
-  "attributes": {
-    "dark": "$STORE.app.darkMode"
+{
+  "nav": {
+    "label": "Payment Request",
+    "icon": "https://agent-apps.call2action.link/assets/c3-app-icon.svg",
+    "iconType": "other",
+    "navigateTo": "payment-request",
+    "align": "top"
   },
-  "properties": {
-    "agent": "$STORE.agent",
-    "config": {
-      "contactCenter": "webex",
-      "noLink": false,
-      "noIvr": false
-    },
-    "c3": {
-      "vendorId": "",
-      "apiKey": "",
-      "logoUrl": "",
-      "supportPhone": "",
-      "supportEmail": "",
-      "paymentRequestWebLinkConfig": {
-        "ttl": 3600,
-        "header1": "",
-        "header2": "",
-        "primaryColor": "",
-        "secondaryColor": ""
-      }
-    },
-    "webex": {
-      "transferredWrapUpCodeId": "",
-      "waitingIdleCodeId": "",
-      "paymentEntryPointId": "",
-      "connect": {
-        "region": "",
-        "serviceKey": "",
-        "channels": {
-          "sms": {
-            "templateId": ""
+  "page": {
+    "id": "payment-request",
+    "widgets": {
+      "c3-payment-request": {
+        "comp": "c3-payment-request",
+        "script": "",
+        "attributes": {
+          "dark": "$STORE.app.darkMode"
+        },
+        "properties": {
+          "agent": "$STORE.agent",
+          "config": {
+            "contactCenter": "webex",
+            "noLink": false,
+            "noIvr": false
           },
-          "email": {
-            "templateId": "",
-            "fromAddress": "",
-            "fromName": ""
+          "c3": {
+            "vendorId": "",
+            "apiKey": "",
+            "logoUrl": "",
+            "supportPhone": "",
+            "supportEmail": "",
+            "paymentRequestWebLinkConfig": {
+              "ttl": 3600,
+              "header1": "",
+              "header2": "",
+              "primaryColor": "",
+              "secondaryColor": ""
+            }
           },
-          "whatsApp": {
-            "templateId": "",
-            "appId": ""
+          "webex": {
+            "transferredWrapUpCodeId": "",
+            "waitingIdleCodeId": "",
+            "paymentEntryPointId": "",
+            "connect": {
+              "region": "",
+              "serviceKey": "",
+              "channels": {
+                "sms": {
+                  "templateId": ""
+                },
+                "email": {
+                  "templateId": "",
+                  "fromAddress": "",
+                  "fromName": ""
+                },
+                "whatsApp": {
+                  "templateId": "",
+                  "appId": ""
+                }
+              }
+            }
           }
         }
       }
+    },
+    "layout": {
+      "areas": [
+        [
+          "c3-payment-request"
+        ]
+      ],
+      "size": {
+        "cols": [
+          1
+        ],
+        "rows": [
+          1
+        ]
+      }
     }
   }
-}
+},
 ```
 
 ### Define Widget Properties
@@ -106,7 +135,7 @@ The `script` to use for the widget depends on the environment used. For this val
 
 | Environment | Script URL                                                    |
 | ----------- | ------------------------------------------------------------- |
-| Development | `https://agent-apps.staging.c2a.link/web-component/widget.js` |
+| Development | `https://agent-apps.dev.c2a.link/web-component/widget.js`     |
 | Staging     | `https://agent-apps.staging.c2a.link/web-component/widget.js` |
 | Production  | `https://agent-apps.call2action.link/web-component/widget.js` |
 
