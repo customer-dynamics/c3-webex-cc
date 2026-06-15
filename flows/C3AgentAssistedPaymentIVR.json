@@ -15456,12 +15456,7 @@
                 "httpRequestMethod_name": "POST",
                 "httpRequestMethod": "POST",
                 "httpContentType:name": "Application/JSON",
-                "outputVariableArray": [
-                  {
-                    "outputVariable": "Select",
-                    "jsonPathExp": ""
-                  }
-                ],
+                "outputVariableArray": [],
                 "httpContentType:type": null,
                 "contentType:type": null,
                 "name": "ReportContactDisconnected",
@@ -16058,12 +16053,7 @@
                 "httpRequestMethod:type": null,
                 "httpRequestMethod": "POST",
                 "httpContentType:name": "Application/JSON",
-                "outputVariableArray": [
-                  {
-                    "outputVariable": "Select",
-                    "jsonPathExp": ""
-                  }
-                ],
+                "outputVariableArray": [],
                 "httpContentType:type": null,
                 "contentType:type": null,
                 "name": "ReportContactDisconnected",
