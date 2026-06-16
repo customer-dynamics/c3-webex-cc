@@ -43,85 +43,77 @@ To add the widget, add the following to your desktop layout JSON file, in the ar
 
 ```json
 {
-  "nav": {
-    "label": "Payment Request",
-    "icon": "https://agent-apps.call2action.link/assets/c3-app-icon.svg",
-    "iconType": "other",
-    "navigateTo": "payment-request",
-    "align": "top"
-  },
-  "page": {
-    "id": "payment-request",
-    "widgets": {
-      "c3-payment-request": {
-        "comp": "c3-payment-request",
-        "script": "",
-        "attributes": {
-          "dark": "$STORE.app.darkMode"
-        },
-        "properties": {
-          "agent": "$STORE.agent",
-          "config": {
-            "contactCenter": "webex",
-            "noLink": false,
-            "noIvr": false
-          },
-          "c3": {
-            "vendorId": "",
-            "apiKey": "",
-            "logoUrl": "",
-            "supportPhone": "",
-            "supportEmail": "",
-            "paymentRequestWebLinkConfig": {
-              "ttl": 3600,
-              "header1": "",
-              "header2": "",
-              "primaryColor": "",
-              "secondaryColor": ""
-            }
-          },
-          "webex": {
-            "transferredWrapUpCodeId": "",
-            "waitingIdleCodeId": "",
-            "paymentEntryPointId": "",
-            "connect": {
-              "region": "",
-              "serviceKey": "",
-              "channels": {
-                "sms": {
-                  "templateId": ""
-                },
-                "email": {
-                  "templateId": "",
-                  "fromAddress": "",
-                  "fromName": ""
-                },
-                "whatsApp": {
-                  "templateId": "",
-                  "appId": ""
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "layout": {
-      "areas": [
-        [
-          "c3-payment-request"
-        ]
-      ],
-      "size": {
-        "cols": [
-          1
-        ],
-        "rows": [
-          1
-        ]
-      }
-    }
-  }
+	"nav": {
+		"label": "Payment Request",
+		"icon": "https://agent-apps.call2action.link/assets/c3-app-icon.svg",
+		"iconType": "other",
+		"navigateTo": "payment-request",
+		"align": "top"
+	},
+	"page": {
+		"id": "payment-request",
+		"widgets": {
+			"c3-payment-request": {
+				"comp": "c3-payment-request",
+				"script": "",
+				"attributes": {
+					"dark": "$STORE.app.darkMode"
+				},
+				"properties": {
+					"agent": "$STORE.agent",
+					"config": {
+						"contactCenter": "webex",
+						"noLink": false,
+						"noIvr": false
+					},
+					"c3": {
+						"vendorId": "",
+						"apiKey": "",
+						"logoUrl": "",
+						"supportPhone": "",
+						"supportEmail": "",
+						"paymentRequestWebLinkConfig": {
+							"ttl": 3600,
+							"header1": "",
+							"header2": "",
+							"primaryColor": "",
+							"secondaryColor": ""
+						}
+					},
+					"webex": {
+						"transferredWrapUpCodeId": "",
+						"waitingIdleCodeId": "",
+						"paymentEntryPointId": "",
+						"connect": {
+							"region": "",
+							"serviceKey": "",
+							"channels": {
+								"sms": {
+									"templateId": ""
+								},
+								"email": {
+									"templateId": "",
+									"fromAddress": "",
+									"fromName": ""
+								},
+								"whatsApp": {
+									"templateId": "",
+									"appId": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"layout": {
+			"areas": [["c3-payment-request"]],
+			"size": {
+				"cols": [1],
+				"rows": [1]
+			}
+		}
+	}
 }
 ```
 
