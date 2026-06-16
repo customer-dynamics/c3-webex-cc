@@ -122,7 +122,7 @@ To add the widget, add the following to your desktop layout JSON file, in the ar
       }
     }
   }
-},
+}
 ```
 
 ### Define Widget Properties
